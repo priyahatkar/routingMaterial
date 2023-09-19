@@ -1,0 +1,27 @@
+
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sideNav>
+        <mat-nav-list (click)="sideNav.close()">
+            <a  mat-list-item routerLink="/">Home</a>
+            <a  mat-list-item routerLink="users">Users</a>
+            <a  mat-list-item routerLink="products">Products</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-toolbar color="primary" class="d-flex justify-content-between">
+        <div>
+            <button  mat-icon-button (click)="sideNav.open()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div>
+            <a mat-button routerLink="">Home</a>
+            <a mat-button routerLink="users">Users</a>
+            <a mat-button routerLink="products">Products</a>
+            <button mat-raised-button>
+                Log Out
+            </button>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
